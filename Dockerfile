@@ -1,5 +1,7 @@
 FROM node:6-alpine
 
+USER root
+
 RUN whoami
 RUN pwd
 RUN ls -la
@@ -28,7 +30,7 @@ RUN adduser -u 2000 -G root -D blue \
 	&& chown -R 2000:0 $APP_HOME
 
 # Install Dependencies
-#USER 2000
+USER 2000
 RUN npm install
 RUN ./node_modules/.bin/bower install --allow-root /app
 #USER 0
