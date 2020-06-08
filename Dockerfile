@@ -2,7 +2,6 @@ FROM node:6-alpine
 
 USER root
 
-RUN whoami
 RUN pwd
 RUN ls -la
 RUN env
