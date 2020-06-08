@@ -1,9 +1,9 @@
 FROM node:6-alpine
 
 # Install Extra Packages
-RUN apk --update add git less openssh jq bash bc ca-certificates curl && \
-    rm -rf /var/lib/apt/lists/* && \
-    rm -rf /var/cache/apk/
+#RUN apk --update add git less openssh jq bash bc ca-certificates curl && \
+#    rm -rf /var/lib/apt/lists/* && \
+#    rm -rf /var/cache/apk/
 
 # Set Environment Variables
 ENV NPM_CONFIG_PREFIX=/home/blue/.npm-global
